@@ -13,6 +13,7 @@ import LoginPage from "./Components/Login";
 import Navbar from "./Components/Navbar"; 
 import Upload from "./Components/UploadFile";
 import "./App.css";
+import Request from "./Components/request"
 
 const App = () => {
   const [selectedClassId, setSelectedClassId] = useState(null);
@@ -38,6 +39,7 @@ const App = () => {
           
           <Route path="/dashboard" />
           <Route path="/upload" element={<Upload />} />
+          <Route path="/request" element={<Request />} />
          
         </Routes>
       </div>

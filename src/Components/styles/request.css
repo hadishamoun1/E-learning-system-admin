@@ -1,0 +1,52 @@
+.admin-container {
+    padding: 2rem;
+  }
+  
+  .admin-heading {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+  
+  .admin-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .admin-table th,
+  .admin-table td {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+  }
+  
+  .admin-table th {
+    background-color: #f4f4f4;
+    text-align: left;
+  }
+  
+  .admin-table td {
+    text-align: left;
+  }
+  
+  .btn-approve {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .btn-reject {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  
+  .btn-approve:hover,
+  .btn-reject:hover {
+    opacity: 0.8;
+  }
+  
