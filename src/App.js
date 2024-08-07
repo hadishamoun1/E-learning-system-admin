@@ -7,10 +7,11 @@ import {
 } from "react-router-dom";
 import AddClassForm from "./Components/AddClass";
 import ClassList from "./Components/ListClasses";
-import ClassDetails from "./Components/ClassDetails"; // Import ClassDetails component
+import ClassDetails from "./Components/ClassDetails"; 
 import StudentList from "./Components/StudentList";
 import LoginPage from "./Components/Login";
-import Navbar from "./Components/Navbar"; // Import the Navbar component
+import Navbar from "./Components/Navbar"; 
+import Upload from "./Components/UploadFile";
 import "./App.css";
 
 const App = () => {
@@ -36,6 +37,7 @@ const App = () => {
           <Route path="/class/:id" element={<ClassDetails />} />
           
           <Route path="/dashboard" />
+          <Route path="/upload" element={<Upload />} />
          
         </Routes>
       </div>
