@@ -13,7 +13,7 @@ function createWindow() {
     },
   });
 
-  win.loadURL("http://localhost:3001"); // Load React app
+  win.loadURL("http://localhost:3001/login"); // Load React app
 }
 
 app.whenReady().then(() => {

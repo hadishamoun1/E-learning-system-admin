@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import axios from "axios";
+import { fetchClasses } from "../slices/classSlice"; // Ensure this path is correct
 import "./styles/AddClass.css";
 
 const AddClassForm = () => {
@@ -7,14 +10,27 @@ const AddClassForm = () => {
     description: "",
     instructor: "",
   });
+  const dispatch = useDispatch();
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
+    try {
+      await axios.post("http://localhost:5000/classes", form);
+      setForm({
+        title: "",
+        description: "",
+        instructor: "",
+      });
+      alert("Class added successfully!");
+      dispatch(fetchClasses()); // Fetch updated classes list
+    } catch (error) {
+      console.error("Error adding class:", error);
+      alert("Failed to add class. Please try again.");
+    }
   };
 
   return (
